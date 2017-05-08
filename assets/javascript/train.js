@@ -9,6 +9,37 @@ var config = {
   
   firebase.initializeApp(config);
 
+  var database = firebase.database();
+
+  $('.btn-default').on('click', function(event) {
+  		event.preventDefault();
+
+  	var trainName = $('#InputTrainName').val().trim();
+  	var trainDestination = $('#InputDestination').val().trim();
+  	var trainTime = moment($("#InputTrainTime").val().trim(), "DD/MM/YY").format("X");
+  	var trainFrequency = $('#InputFrequency').val().trim();
+
+  	var newTrain = {
+  		name: trainName,
+  		destination: trainDestination,
+  		time: trainTime,
+  		frequency: trainFrequency
+  	};
+
+
+  	database.ref().push(newTrain);
+
+  	console.log(newTrain.name);
+  	console.log(newTrain.destination);
+  	console.log(newTrain.time);
+  	console.log(newTrain.frequency);
+
+  	alert('Train Station Added!');
+
+
+
+  })
+
 
 
 
