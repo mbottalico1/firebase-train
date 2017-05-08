@@ -11,7 +11,7 @@
     <div class="jumbotron">
         <h1>Train Schedule </h1>
     </div>
-    <div class="panel panel-default">
+    <div class="panel">
         <div class="panel-heading">
             <h3 class="panel-title">Train Schedule</h3>
         </div>
@@ -21,30 +21,37 @@
                     <tr>
                         <th>Train Name</th>
                         <th>Destination</th>
-                        <th></th>
                         <th>Frequency</th>
                         <th>Next Arrival</th>
                         <th>Minutes Away</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
+                        <th>Red Bank Station</th>
+                        <th>Red Bank</th>
                         <th></th>
                         <th></th>
                         <th></th>
                         <th></th>
                     </tr>
                     <tr>
+                        <th>California Zipline</th>
+                        <th>California</th>
                         <th></th>
                         <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>Chi-town Station</th>
+                        <th>Chicago</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>Congest ID Center</th>
+                        <th>New York City</th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -54,6 +61,38 @@
             </div>
         </div>
     </div>
+    <form>
+        <div class="panel2">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Train</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="InputTrainName">Train Name</label>
+                    <input type="name" class="form-control" id="InputTrainName" placeholder="Train Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputDestination">Destination</label>
+                    <input type="destination" class="form-control" id="InputDestination" placeholder="Destination">
+                </div>
+                <div class="form-group">
+                    <label for="InputTrainTime">First Train Time</label>
+                    <input type="traintime" class="form-control" id="InputTrainTime" placeholder="Train-time">
+                </div>
+                <div class="form-group">
+                    <label for="InputFrequency">Frequency (min)</label>
+                    <input type="frequency" class="form-control" id="InputFrequency" placeholder="Frequency">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="assets/javascript/train.js"></script>
 </body>
