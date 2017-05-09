@@ -53,6 +53,16 @@ var config = {
     var trainTime = childSnapshot.val().time;
     var trainFrequency = childSnapshot.val().frequency;
 
+    console.log(trainName);
+    console.log(trainDestination);
+    console.log(trainTime);
+    console.log(trainFrequency);
+
+
+    var timeTrain = moment().add(1, 'days').calendar();
+
+    $('.table > tbody').append("<tr><td>" + trainName + "<tr2><td>" + trainDestination + "<tr3><td>" + trainFrequency + "<tr4><td>" + timeTrain);
+
   })
 
 
