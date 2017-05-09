@@ -36,9 +36,25 @@ var config = {
 
   	alert('Train Station Added!');
 
-
+    $('#InputTrainName').val("");
+    $('#InputDestination').val("");
+    $('#InputTrainTime').val("");
+    $('#InputFrequency').val("");
 
   })
+
+  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+    console.log(childSnapshot.val());
+
+
+    var trainName = childSnapshot.val().name;
+    var trainDestination = childSnapshot.val().destination;
+    var trainTime = childSnapshot.val().time;
+    var trainFrequency = childSnapshot.val().frequency;
+
+  })
+
 
 
 
